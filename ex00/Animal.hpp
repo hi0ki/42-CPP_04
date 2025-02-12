@@ -7,5 +7,11 @@
 	{
 		protected:
 			std::string type;
+		public:
+			Animal();
+			Animal(std::string type);
+			Animal(Animal &obj);
+			Animal &operator=(Animal &obj);
+			~Animal();
 	};
 #endif

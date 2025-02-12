@@ -2,5 +2,6 @@
 
 int main()
 {
-	
+	Animal obj("Dog");
+
 }
