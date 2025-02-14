@@ -11,18 +11,19 @@ Cat::Cat(std::string type) : Animal(type)
 	std::cout << "Cat type constructor called" << std::endl;
 }
 
-Cat::Cat(Cat &obj)
+Cat::Cat(const Cat &obj) : Animal(obj)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	*this = obj;
 }
-Cat &Cat::operator=(Cat &obj)
+
+
+Cat &Cat::operator=(const Cat &obj)
 {
 	std::cout << "Cat assignation operator called" << std::endl;
 	this->type = obj.type;
 	return *this;
 }
-
 
 Cat::~Cat()
 {

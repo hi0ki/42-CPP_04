@@ -7,8 +7,8 @@
 		public:
 			Cat();
 			Cat(std::string type);
-			Cat(Cat &obj);
-			Cat &operator=(Cat &obj);
+			Cat(const Cat &obj);
+			Cat &operator=(const Cat &obj);
 			void makeSound() const;
 			std::string getType() const;
 			~Cat();

@@ -9,13 +9,13 @@ Animal::Animal(std::string type) : type(type)
 {
 	std::cout << "Animal type constructor called" << std::endl;
 }
-Animal::Animal(Animal &obj)
+Animal::Animal(const Animal &obj)
 {
 	std::cout << "Animal copy constructor called" << std::endl;
 	*this = obj;
 }
 
-Animal &Animal::operator=(Animal &obj)
+Animal &Animal::operator=(const Animal &obj)
 {
 	std::cout << "Animal assignation operator called" << std::endl;
 	this->type = obj.type;
