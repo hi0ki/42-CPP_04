@@ -2,8 +2,14 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 
+
+void ll()
+{
+	system("leaks program");
+}
 int main()
 {
+	atexit(ll);
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
@@ -13,5 +19,6 @@ int main()
 	i->makeSound(); //will output the cat sound!
 	j->makeSound();
 	meta->makeSound();
+
 	return 0;
 }
