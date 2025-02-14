@@ -3,6 +3,9 @@
 
 	#include <iostream>
 
+	#define GREEN   "\033[32m"
+	#define GREY    "\033[90m"
+	#define RESET   "\033[0m"
 	class Animal
 	{
 		protected:
@@ -13,7 +16,7 @@
 			Animal(const Animal &obj);
 			Animal &operator=(const Animal &obj);
 			virtual void makeSound() const;
-			virtual std::string getType() const;
-			~Animal();
+			std::string getType() const;
+			virtual ~Animal();
 	};
 #endif

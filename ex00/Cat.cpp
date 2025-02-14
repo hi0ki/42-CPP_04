@@ -3,36 +3,36 @@
 Cat::Cat()
 {
 	type = "Cat";
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << GREY << "Cat default constructor called" << RESET << std::endl;
 }
 
 Cat::Cat(std::string type) : Animal(type)
 {
-	std::cout << "Cat type constructor called" << std::endl;
+	std::cout << GREY << "Cat type constructor called" << RESET << std::endl;
 }
 
 Cat::Cat(const Cat &obj) : Animal(obj)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << GREY << "Cat copy constructor called" << RESET << std::endl;
 	*this = obj;
 }
 
 
 Cat &Cat::operator=(const Cat &obj)
 {
-	std::cout << "Cat assignation operator called" << std::endl;
+	std::cout << GREY << "Cat assignation operator called" << RESET << std::endl;
 	this->type = obj.type;
 	return *this;
 }
 
 Cat::~Cat()
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << GREY << "Cat destructor called" << RESET << std::endl;
 }
 
 void Cat::makeSound() const
 {
-	std::cout << "Meeeeoooow Meeeeooooow" << std::endl;
+	std::cout << GREEN << "Meeeeoooow Meeeeooooow" << RESET << std::endl;
 }
 
 std::string Cat::getType() const

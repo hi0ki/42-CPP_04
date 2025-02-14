@@ -1,12 +1,12 @@
 C++ = c++ -Wall -Wextra -Werror
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 
 NAME = program
 
 OBJ = $(SRC:.cpp=.o)
 
-HEADERS = Animal.hpp Dog.hpp Cat.hpp
+HEADERS = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 
 ALL: $(NAME)
 
