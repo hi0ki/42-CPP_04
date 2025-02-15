@@ -6,6 +6,7 @@
 	#define GREEN   "\033[32m"
 	#define GREY    "\033[90m"
 	#define RESET   "\033[0m"
+
 	class Animal
 	{
 		protected:
