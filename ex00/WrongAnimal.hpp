@@ -14,7 +14,7 @@
 			WrongAnimal();
 			WrongAnimal(std::string type);
 			WrongAnimal(const WrongAnimal &obj);
-			~WrongAnimal();
+			virtual ~WrongAnimal();
 			WrongAnimal &operator=(const WrongAnimal &obj);
 			void makeSound() const;
 			std::string getType() const;
