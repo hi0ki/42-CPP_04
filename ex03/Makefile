@@ -1,6 +1,6 @@
 C++ = c++ -Wall -Wextra -Werror
 
-SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp
+SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
 
 NAME = program
 

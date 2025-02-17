@@ -3,10 +3,10 @@
 
 	#include "IMateriaSource.hpp"
 
-	class MateriaSource
+	class MateriaSource : public IMateriaSource
 	{
 		private:
-			Materia *materias[4];
+			AMateria *materias[4];
 		public:
 			//Constructor & Destructor
 			MateriaSource();

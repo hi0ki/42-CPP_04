@@ -4,28 +4,41 @@
 #include "Character.hpp"
 #include "ICharacter.hpp"
 #include "AMateria.hpp"
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
 
-void ll()
+// void ll()
+// {
+// 	// system("leaks -q program");
+// }
+
+void test()
 {
-	system("leaks -q program");
+
 }
 
 int main()
 {
-	atexit(ll);
-	Cure *cure = new Cure();
-	Ice *ice = new Ice();
-	Character character("Character");
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
 
-	std::cout << "-----------------------------------------------\n";
-	character.equip(ice);
-	character.equip(cure);
+	ICharacter* me = new Character("me");
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
 
-	character.use(0, character);
-	std::cout << "-----------------------------------------------\n";
-	delete cure;
-	delete ice;
-	// character.use(0, character);
-	// character.use(1, character);
+	me->unequip(0);
+	me->unequip(1);
+
+	ICharacter* bob = new Character("bob");
+	me->use(0, *bob);
+	me->use(1, *bob);
+
+	delete bob;
+	delete me;
+	delete src;
 	return 0;
 }
