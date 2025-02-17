@@ -1,12 +1,12 @@
 C++ = c++ -Wall -Wextra -Werror
 
-SRC = main.cpp AMateria.cpp ICharacter.cpp Ice.cpp Cure.cpp
+SRC = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp
 
 NAME = program
 
 OBJ = $(SRC:.cpp=.o)
 
-HEADERS = AMateria.hpp ICharacter.hpp Ice.hpp Cure.hpp
+HEADERS = AMateria.hpp ICharacter.hpp Ice.hpp Cure.hpp Character.hpp IMateriaSource.hpp MateriaSource.hpp
 
 ALL: $(NAME)
 
