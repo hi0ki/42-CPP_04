@@ -20,12 +20,15 @@ int main()
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
-	me->unequip(0);
-	me->unequip(1);
 
 	ICharacter* bob = new Character("bob");
+	std::cout << "--------------------------------" << std::endl;
 	me->use(0, *bob);
 	me->use(1, *bob);
+	std::cout << "--------------------------------" << std::endl;
+
+	me->unequip(0);
+	me->unequip(1);
 
 	delete bob;
 	delete me;
